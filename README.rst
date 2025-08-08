@@ -5,24 +5,27 @@ affinitic.smartweb.luigi
 This package is use to migrate content from a plone site to a smartweb site.
 
 The migration has 3 step :
+
 1. Export content from old site with collective.exportimport
+
 2. Process the exported data with this package
+
 3. Import the data in the new smartweb site, the package affinitic.smartweb must be instal
 
 ==============
 How to install
 ==============
 
-- Create a environement :
+1. Create a environement :
   ``pyenv virtualenv 3.8 affinitic.smartweb.luigi``
 
-- Activate the environement :
+2. Activate the environement :
   ``pyenv activate affinitic.smartweb.luigi``
 
-- Link bin folder:
+3. Link bin folder:
   ``ln -s ~/.pyenv/versions/affinitic.smartweb.luigi/bin ./bin``
 
-- Install dependencies:
+4. Install dependencies:
   ``bin/pip install -r requirements.txt``
 
 =============
