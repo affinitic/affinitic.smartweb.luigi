@@ -1,0 +1,2 @@
+luigi==3.2.0
+beautifulsoup4==4.11.1
