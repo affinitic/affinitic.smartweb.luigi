@@ -39,12 +39,14 @@ Put your json in `data/project_name/in`.
 -----------
 Config file
 -----------
+You can pass this section if you export from localhost.
 Add a ``project_name.cfg`` at the root. Inside it add this :
 ::
   [HandleDocument]
   url_absolute=https://www.project_name.be
 
 Add the original url (the one that appear in exported json file) to be fix during the process
+In the next extion you will have to add ``LUIGI_CONFIG_PATH=./project_name.cfg``in front of the Makefile command.
 
 --------
 Makefile
@@ -53,7 +55,7 @@ Then add a command in Makefile to start.
 ex:
 ::
   run-project-name :
-	LUIGI_CONFIG_PATH=./project_name.cfg bin/luigi --module src.main Start --path "./data/project_name" --local-scheduler 
+	bin/luigi --module src.main Start --path "./data/project_name" --local-scheduler 
 
 ------
 Launch

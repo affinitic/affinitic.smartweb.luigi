@@ -32,8 +32,8 @@ def remove_sufixe(path):
     return path
 
 
-def change_prefixe(path, url_absolute):
-    if path.startswith(url_absolute):
+def change_prefixe(path, url_absolute=None):
+    if url_absolute and path.startswith(url_absolute):
         return path.replace(url_absolute, "http://localhost:8080/Plone/fr")
     return path
 
@@ -148,7 +148,7 @@ class GenerateListOfImageId(luigi.Task):
 
 class HandleDocument(luigi.Task):
     path = luigi.Parameter()
-    url_absolute = luigi.Parameter()
+    url_absolute = luigi.Parameter(default=None)
 
     list_image = []
 
